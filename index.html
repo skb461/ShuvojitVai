@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      .pie-chart {
+        background:
+          radial-gradient(
+            circle closest-side,
+            white 0,
+            white 44.22%,
+            transparent 44.22%,
+            transparent 66%,
+            white 0
+          ),
+          conic-gradient(
+            #4e79a7 0,
+            #4e79a7 38%,
+            #f28e2c 0,
+            #f28e2c 61%,
+            #e15759 0,
+            #e15759 77%,
+            #76b7b2 0,
+            #76b7b2 87%,
+            #59a14f 0,
+            #59a14f 93%,
+            #edc949 0,
+            #edc949 100%
+        );
+        position: relative;
+        width: 500px;
+        min-height: 350px;
+        margin: 0;
+        outline: 1px solid #ccc;
+      }
+      .pie-chart h2 {
+        position: absolute;
+        margin: 1rem;
+      }
+      .pie-chart cite {
+        position: absolute;
+        bottom: 0;
+        font-size: 80%;
+        padding: 1rem;
+        color: gray;
+      }
+      .pie-chart figcaption {
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+        font-size: smaller;
+        text-align: right;
+      }
+      .pie-chart span:after {
+        display: inline-block;
+        content: "";
+        width: 0.8em;
+        height: 0.8em;
+        margin-left: 0.4em;
+        height: 0.8em;
+        border-radius: 0.2em;
+        background: currentColor;
+      }
+    </style>
+
+
+    <title></title>
+  </head>
+  <body>
+
+    <div class="container">
+      
+      <div class="row">
+        
+        <div class="card col m-2" style="width:400px">
+          <div class="card-body">
+            <h4 class="card-title">ABCD</h4>
+            <p class="card-text fw-bold">10000</p>
+          </div>
+        </div> 
+        
+        <div class="card col m-2" style="width:400px">
+          <div class="card-body">
+            <h4 class="card-title">ABCD</h4>
+            <p class="card-text fw-bold">10000</p>
+          </div>
+        </div> 
+        
+        <div class="card col m-2" style="width:400px">
+          <div class="card-body">
+            <h4 class="card-title">ABCD</h4>
+            <p class="card-text fw-bold">10000</p>
+          </div>
+        </div> 
+        
+        <div class="card col m-2" style="width:400px">
+          <div class="card-body">
+            <h4 class="card-title">ABCD</h4>
+            <p class="card-text fw-bold">10000</p>
+          </div>
+        </div> 
+
+      </div>
+
+    </div>
+
+    <div class="container py-5">
+
+      <div class="row">
+        
+        <div class="col-6">
+
+          <figure class="pie-chart">
+            <figcaption>
+              Coal 38<span style="color:#4e79a7"></span><br>
+              Natural Gas 23<span style="color:#f28e2c"></span><br>
+              Hydro 16<span style="color:#e15759"></span><br>
+              Nuclear 10<span style="color:#76b7b2"></span><br>
+              Renewable 6<span style="color:#59a14f"></span><br>
+              Other 7<span style="color:#edc949"></span>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <div class="col-6">
+          
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+
+    <script>
+      const xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+      new Chart("myChart", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [{ 
+            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            borderColor: "red",
+            fill: false
+          }, { 
+            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor: "green",
+            fill: false
+          }, { 
+            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor: "blue",
+            fill: false
+          }]
+        },
+        options: {
+          legend: {display: false}
+        }
+      });
+    </script>
+
+
+  </body>
+</html>
