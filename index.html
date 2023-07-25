@@ -72,69 +72,108 @@
   </head>
   <body>
 
-    <div class="container">
-      
-      <div class="row">
-        
-        <div class="card col m-2" style="width:400px">
-          <div class="card-body">
-            <h4 class="card-title">ABCD</h4>
-            <p class="card-text fw-bold">10000</p>
-          </div>
-        </div> 
-        
-        <div class="card col m-2" style="width:400px">
-          <div class="card-body">
-            <h4 class="card-title">ABCD</h4>
-            <p class="card-text fw-bold">10000</p>
-          </div>
-        </div> 
-        
-        <div class="card col m-2" style="width:400px">
-          <div class="card-body">
-            <h4 class="card-title">ABCD</h4>
-            <p class="card-text fw-bold">10000</p>
-          </div>
-        </div> 
-        
-        <div class="card col m-2" style="width:400px">
-          <div class="card-body">
-            <h4 class="card-title">ABCD</h4>
-            <p class="card-text fw-bold">10000</p>
-          </div>
-        </div> 
+    
 
-      </div>
 
-    </div>
-
-    <div class="container py-5">
+    <div class="container-fluid">
 
       <div class="row">
         
-        <div class="col-6">
-
-          <figure class="pie-chart">
-            <figcaption>
-              Coal 38<span style="color:#4e79a7"></span><br>
-              Natural Gas 23<span style="color:#f28e2c"></span><br>
-              Hydro 16<span style="color:#e15759"></span><br>
-              Nuclear 10<span style="color:#76b7b2"></span><br>
-              Renewable 6<span style="color:#59a14f"></span><br>
-              Other 7<span style="color:#edc949"></span>
-            </figcaption>
-          </figure>
-
-        </div>
-
-        <div class="col-6">
+        <div class="col-9">
           
-          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+          <div class="container-fluid py-5">
+
+            <div class="row">
+              
+              <div class="col-6">
+
+                <figure class="pie-chart">
+                  <figcaption>
+                    Coal 38<span style="color:#4e79a7"></span><br>
+                    Natural Gas 23<span style="color:#f28e2c"></span><br>
+                    Hydro 16<span style="color:#e15759"></span><br>
+                    Nuclear 10<span style="color:#76b7b2"></span><br>
+                    Renewable 6<span style="color:#59a14f"></span><br>
+                    Other 7<span style="color:#edc949"></span>
+                  </figcaption>
+                </figure>
+
+              </div>
+
+              <div class="col-6">
+                
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="container-fluid">
+            
+            <div class="row fixed-bottom">
+              
+              <div class="card col m-2" style="width:400px">
+                <div class="card-body">
+                  <h6 class="card-title">Electricity</h6>
+                  <p class="card-text fw-bold">Demand: XXXX</p>
+                  <hr class="bg-dark pt-1">
+                  <p class="card-text fw-bold">Supply: XXXX</p>
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="width:400px">
+                <div class="card-body">
+                  <h6 class="card-title">Gas</h6>
+                  <p class="card-text fw-bold">Demand: XXXX</p>
+                  <hr class="bg-dark pt-1">
+                  <p class="card-text fw-bold">Supply: XXXX</p>
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="width:400px">
+                <div class="card-body">
+                  <h6 class="card-title">Price:</h6>
+                  <p class="card-text fw-bold">Electricity: XXXX/unit</p>
+                  <hr class="bg-dark pt-1">
+                  <p class="card-text fw-bold">Gas: XXXX/unit</p>
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="width:400px">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Price:</h6> -->
+                  <p class="card-text fw-bold">Gas Pressure: XXXX</p>
+                  <hr class="bg-dark pt-1">
+                  <p class="card-text fw-bold">Expected Current: XXXX</p>
+                </div>
+              </div> 
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-3">
+          
+          <div class="card d-block mx-auto p-0 col m-2" style="">
+            <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
+          </div>
+          
+          <div class="card d-block mx-auto p-0 col m-2" style="">
+            <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
+          </div>
+          
+          <div class="card d-block mx-auto p-0 col m-2" style="">
+            <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
+          </div>
 
         </div>
 
       </div>
-
+      
     </div>
 
 
