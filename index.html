@@ -75,36 +75,70 @@
     
 
 
+
     <div class="container-fluid">
 
       <div class="row">
         
         <div class="col-9">
+
+          <div class="row">
+              
+              <div class="card col m-2" style="width:400px">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Electricity</h6> -->
+                  <p class="card-text fw-bold">GOVT. Initiatives</p>
+                  <hr class="bg-dark pt-1">
+                  <p class="card-text fw-bold">Status 0/15</p>
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="width:400px">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Gas</h6> -->
+                  <p class="card-text fw-bold">MO. Initiatives</p>
+                  <hr class="bg-dark pt-1">
+                  <p class="card-text fw-bold">Status 0/12</p>
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="width:400px">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Price:</h6> -->
+                  <p class="card-text fw-bold">Joint Meeting Schedule 12:00pm, 27th July</p>
+                  <!-- <hr class="bg-dark pt-1"> -->
+                  <p class="card-text fw-bold">Link</p>
+                </div>
+              </div> 
+
+            </div>
           
           <div class="container-fluid py-5">
 
             <div class="row">
               
-              <div class="col-6">
+              <canvas id="myChart" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
 
-                <figure class="pie-chart">
-                  <figcaption>
-                    Coal 38<span style="color:#4e79a7"></span><br>
-                    Natural Gas 23<span style="color:#f28e2c"></span><br>
-                    Hydro 16<span style="color:#e15759"></span><br>
-                    Nuclear 10<span style="color:#76b7b2"></span><br>
-                    Renewable 6<span style="color:#59a14f"></span><br>
-                    Other 7<span style="color:#edc949"></span>
-                  </figcaption>
-                </figure>
-
-              </div>
-
-              <div class="col-6">
                 
-                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+              <canvas id="myChart_2" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
 
-              </div>
+            </div>
+
+            <div class="row">
+              
+              <canvas id="myChart_3" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
+
+                
+              <canvas id="myChart_4" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
+
+            </div>
+
+            <div class="row">
+              
+              <canvas id="myChart_5" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
+
+                
+              <canvas id="myChart_6" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
 
             </div>
 
@@ -112,7 +146,7 @@
 
           <div class="container-fluid">
             
-            <div class="row fixed-bottom">
+            <div class="row">
               
               <div class="card col m-2" style="width:400px">
                 <div class="card-body">
@@ -158,17 +192,67 @@
 
         <div class="col-3">
           
-          <div class="card d-block mx-auto p-0 col m-2" style="">
+          <div class="card d-block mx-auto p-0 col m-0" style="">
             <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
           </div>
           
-          <div class="card d-block mx-auto p-0 col m-2" style="">
+          <div class="card d-block mx-auto p-0 col m-0" style="">
             <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
           </div>
           
-          <div class="card d-block mx-auto p-0 col m-2" style="">
+          <div class="card d-block mx-auto p-0 col m-0" style="">
             <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
           </div>
+
+            
+            <div class="">
+              
+              <div class="card col m-2" style="">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Electricity</h6> -->
+                  <p class="card-text fw-bold">Renewable Energy</p>
+                  <!-- <hr class="bg-dark pt-1"> -->
+                  <!-- <p class="card-text fw-bold">Supply: XXXX</p> -->
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Gas</h6> -->
+                  <p class="card-text fw-bold">Green Energy Generation: 50MW</p>
+                  <!-- <hr class="bg-dark pt-1"> -->
+                  <!-- <p class="card-text fw-bold">Supply: XXXX</p> -->
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Price:</h6> -->
+                  <p class="card-text fw-bold">Last Month Electricity Usage: 15000MW</p>
+                  <!-- <hr class="bg-dark pt-1"> -->
+                  <!-- <p class="card-text fw-bold">Gas: XXXX/unit</p> -->
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Price:</h6> -->
+                  <p class="card-text fw-bold">Renewable Energy Generation: 20Mw</p>
+                  <!-- <hr class="bg-dark pt-1"> -->
+                  <!-- <p class="card-text fw-bold">Expected Current: XXXX</p> -->
+                </div>
+              </div> 
+              
+              <div class="card col m-2" style="">
+                <div class="card-body">
+                  <!-- <h6 class="card-title">Price:</h6> -->
+                  <p class="card-text fw-bold">Last Month Gas Consumption: 3000mmcfd</p>
+                  <!-- <hr class="bg-dark pt-1"> -->
+                  <!-- <p class="card-text fw-bold">Expected Current: XXXX</p> -->
+                </div>
+              </div> 
+
+            </div>
 
         </div>
 
@@ -188,6 +272,116 @@
       const xValues = [100,200,300,400,500,600,700,800,900,1000];
 
       new Chart("myChart", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [{ 
+            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            borderColor: "red",
+            fill: false
+          }, { 
+            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor: "green",
+            fill: false
+          }, { 
+            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor: "blue",
+            fill: false
+          }]
+        },
+        options: {
+          legend: {display: false}
+        }
+      });
+      new Chart("myChart_2", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [{ 
+            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            borderColor: "red",
+            fill: false
+          }, { 
+            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor: "green",
+            fill: false
+          }, { 
+            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor: "blue",
+            fill: false
+          }]
+        },
+        options: {
+          legend: {display: false}
+        }
+      });
+      new Chart("myChart_3", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [{ 
+            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            borderColor: "red",
+            fill: false
+          }, { 
+            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor: "green",
+            fill: false
+          }, { 
+            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor: "blue",
+            fill: false
+          }]
+        },
+        options: {
+          legend: {display: false}
+        }
+      });
+      new Chart("myChart_4", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [{ 
+            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            borderColor: "red",
+            fill: false
+          }, { 
+            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor: "green",
+            fill: false
+          }, { 
+            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor: "blue",
+            fill: false
+          }]
+        },
+        options: {
+          legend: {display: false}
+        }
+      });
+      new Chart("myChart_5", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [{ 
+            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            borderColor: "red",
+            fill: false
+          }, { 
+            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor: "green",
+            fill: false
+          }, { 
+            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor: "blue",
+            fill: false
+          }]
+        },
+        options: {
+          legend: {display: false}
+        }
+      });
+      new Chart("myChart_6", {
         type: "line",
         data: {
           labels: xValues,
