@@ -8,71 +8,35 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <style>
-      .pie-chart {
-        background:
-          radial-gradient(
-            circle closest-side,
-            white 0,
-            white 44.22%,
-            transparent 44.22%,
-            transparent 66%,
-            white 0
-          ),
-          conic-gradient(
-            #4e79a7 0,
-            #4e79a7 38%,
-            #f28e2c 0,
-            #f28e2c 61%,
-            #e15759 0,
-            #e15759 77%,
-            #76b7b2 0,
-            #76b7b2 87%,
-            #59a14f 0,
-            #59a14f 93%,
-            #edc949 0,
-            #edc949 100%
-        );
-        position: relative;
-        width: 500px;
-        min-height: 350px;
-        margin: 0;
-        outline: 1px solid #ccc;
-      }
-      .pie-chart h2 {
-        position: absolute;
-        margin: 1rem;
-      }
-      .pie-chart cite {
-        position: absolute;
-        bottom: 0;
-        font-size: 80%;
-        padding: 1rem;
-        color: gray;
-      }
-      .pie-chart figcaption {
-        position: absolute;
-        bottom: 1em;
-        right: 1em;
-        font-size: smaller;
-        text-align: right;
-      }
-      .pie-chart span:after {
-        display: inline-block;
-        content: "";
-        width: 0.8em;
-        height: 0.8em;
-        margin-left: 0.4em;
-        height: 0.8em;
-        border-radius: 0.2em;
-        background: currentColor;
-      }
-    </style>
 
 
-    <title></title>
+<style>
+  .pie-chart {
+    background:
+      radial-gradient(
+        circle closest-side,
+        white 0,
+        white 61.2%,
+        transparent 61.2%,
+        transparent 85%,
+        white 0
+      ),
+      conic-gradient(
+        #0000ff 0,
+        #0000ff 40%,
+        #bababa 0,
+        #bababa 100%
+    );
+    position: relative;
+    width: 500px;
+    min-height: 350px;
+    margin: 0;
+  }
+</style>
+
+
   </head>
-  <body>
+  <body style="background:#fff">
 
     
 
@@ -124,30 +88,123 @@
 
             <div class="row">
               
-              <canvas id="myChart" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
-
+              <div class="col m-1 my-3 border shadow p-3">
+                <h4 class="text-center">Electricity</h4>
                 
-              <canvas id="myChart_2" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
+                <canvas id="myChart_3" class="" style="width:100%;max-width:600px;"></canvas>
+                <div class="row pt-3">
+                  <div class="col-6">
+                    <p class="fw-bold text-center">Y-Axis: Mega Watt</p>
+                    <p class="fw-bold text-center">X-Axis: Weekly</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="text-danger text-center">Current Supply</p>
+                    <!-- <p class="text-success text-center">Project Demands</p> -->
+                    <p class="text-primary text-center">Actual Demands</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col m-1 my-3 border shadow p-3">
+                <h4 class="text-center">Gas</h4>
+                
+                <canvas id="myChart_4" class="" style="width:100%;max-width:600px;"></canvas>
+                <div class="row pt-3">
+                  <div class="col-6">
+                    <p class="fw-bold text-center">Y-Axis: mmcfd</p>
+                    <p class="fw-bold text-center">X-Axis: Weekly</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="text-danger text-center">Current Supply</p>
+                    <!-- <p class="text-success text-center">Project Demands</p> -->
+                    <p class="text-primary text-center">Actual Demands</p>
+                  </div>
+                </div>
+              </div>
 
             </div>
 
             <div class="row">
               
-              <canvas id="myChart_3" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
-
+              <div class="col m-1 my-3 border shadow p-3">
+                <h4 class="text-center">Increasing Production Cost (%)</h4>
                 
-              <canvas id="myChart_4" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
+                <canvas id="myChart" class="" style="width:100%;max-width:600px;"></canvas>
+                <div class="row pt-3">
+                  <div class="col-6">
+                    <p class="fw-bold text-center">Y-Axis: Increased Production Cost</p>
+                    <p class="fw-bold text-center">X-Axis: Weekly</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="text-success text-center">Project Demands</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col m-1 my-3 border shadow p-3">
+                <h4 class="text-center">Idle Capacity (%)</h4>
+                
+                <canvas id="myChart_2" class="" style="width:100%;max-width:600px;"></canvas>
+                <div class="row pt-3">
+                  <div class="col-6">
+                    <p class="fw-bold text-center">Y-Axis: Idle Capacity</p>
+                    <p class="fw-bold text-center">X-Axis: Weekly</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="text-success text-center">Project Demands</p>
+                  </div>
+                </div>
+              </div>
 
             </div>
 
             <div class="row">
               
-              <canvas id="myChart_5" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
-
+              <div class="col m-1 my-3 border shadow p-3">
+                <h4 class="text-center">Way to Mujib Prosparity Plan</h4>
                 
-              <canvas id="myChart_6" class="col-6 my-3" style="width:100%;max-width:600px;"></canvas>
+                <canvas id="myChart_5" class="" style="width:100%;max-width:600px;"></canvas>
+                <div class="row pt-3">
+                  <div class="col-6">
+                    <p class="fw-bold text-center">Y-Axis: Mega Watt</p>
+                    <p class="fw-bold text-center">X-Axis: Yearly</p>
+                  </div>
+                  <div class="col-6">
+                    <!-- <p class="text-danger text-center">Current Supply</p> -->
+                    <p class="text-success text-center">Plan Capacity By 2050</p>
+                    <p class="text-primary text-center">Capacity</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col m-1 my-3 border shadow p-3">
+                <h4 class="text-center">Reduced CO<sub>2</sub> Emission (%)</h4>
+                
+                <!-- <canvas id="myChart_6" class="" style="width:100%;max-width:600px;"></canvas> -->
+                <div class="row">
+
+                  <figure class="pie-chart col" style="margin-left:23%">
+                  </figure>
+
+                  <h1 class="text-primary col text-left" style="margin-top:20%">40%</h1>
+
+                </div>
+
+                <div class="row pt-3">
+                  <div class="col-6">
+                    <p class="fw-bold text-center"></p>
+                    <p class="fw-bold text-center"></p>
+                  </div>
+                  <div class="col-6">
+                    <!-- <p class="text-danger text-center">Current Supply</p> -->
+                    <!-- <p class="text-success text-center">Project Demands</p> -->
+                    <p class="text-primary text-center">Reduced CO<sub>2</sub> Emission</p>
+                  </div>
+                </div>
+              </div>
 
             </div>
+
 
           </div>
 
@@ -158,36 +215,36 @@
               <div class="card col m-2" style="width:400px">
                 <div class="card-body">
                   <h6 class="card-title">Electricity</h6>
-                  <p class="card-text fw-bold">Demand: XXXX</p>
+                  <p class="card-text fw-bold">Demand: 1800/MW</p>
                   <hr class="bg-dark pt-1">
-                  <p class="card-text fw-bold">Supply: XXXX</p>
+                  <p class="card-text fw-bold">Supply: 1609/MW</p>
                 </div>
               </div> 
               
               <div class="card col m-2" style="width:400px">
                 <div class="card-body">
                   <h6 class="card-title">Gas</h6>
-                  <p class="card-text fw-bold">Demand: XXXX</p>
+                  <p class="card-text fw-bold">Demand: 3000/mmcfd</p>
                   <hr class="bg-dark pt-1">
-                  <p class="card-text fw-bold">Supply: XXXX</p>
+                  <p class="card-text fw-bold">Supply: 2280/mmcfd</p>
                 </div>
               </div> 
               
               <div class="card col m-2" style="width:400px">
                 <div class="card-body">
                   <h6 class="card-title">Price:</h6>
-                  <p class="card-text fw-bold">Electricity: XXXX/unit</p>
+                  <p class="card-text fw-bold">Electricity: 10.89/unit</p>
                   <hr class="bg-dark pt-1">
-                  <p class="card-text fw-bold">Gas: XXXX/unit</p>
+                  <p class="card-text fw-bold">Gas: 33/ccm</p>
                 </div>
               </div> 
               
               <div class="card col m-2" style="width:400px">
                 <div class="card-body">
-                  <!-- <h6 class="card-title">Price:</h6> -->
-                  <p class="card-text fw-bold">Gas Pressure: XXXX</p>
+                  <h6 class="card-title"></h6>
+                  <p class="card-text fw-bold">Gas Pressure: 1.8 psi</p>
                   <hr class="bg-dark pt-1">
-                  <p class="card-text fw-bold">Expected Current: XXXX</p>
+                  <p class="card-text fw-bold">Expected Gas Pressure: 10 -15 psi</p>
                 </div>
               </div> 
 
@@ -200,15 +257,15 @@
         <div class="col-3">
           
           <div class="card d-block mx-auto p-0 col m-0" style="">
-            <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="1.gif" alt="Card image" style="width:100%">
           </div>
           
           <div class="card d-block mx-auto p-0 col m-0" style="">
-            <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="2.jpeg" alt="Card image" style="width:100%">
           </div>
           
           <div class="card d-block mx-auto p-0 col m-0" style="">
-            <img class="card-img-top" src="1.jpg" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="3.jpeg" alt="Card image" style="width:100%">
           </div>
 
             
@@ -217,7 +274,9 @@
               <div class="card col m-2" style="">
                 <div class="card-body">
                   <!-- <h6 class="card-title">Electricity</h6> -->
-                  <p class="card-text fw-bold">Renewable Energy</p>
+                  <h4 class="card-text fw-bold">Renewable Energy Generation</h4>
+                  <p class="card-text fw-bold">Current: 180MW</p>
+                  <p class="card-text fw-bold">Previous: 100MW</p>
                   <!-- <hr class="bg-dark pt-1"> -->
                   <!-- <p class="card-text fw-bold">Supply: XXXX</p> -->
                 </div>
@@ -226,7 +285,9 @@
               <div class="card col m-2" style="">
                 <div class="card-body">
                   <!-- <h6 class="card-title">Gas</h6> -->
-                  <p class="card-text fw-bold">Green Energy Generation: 50MW</p>
+                  <h4 class="card-text fw-bold">Green Energy Generation</h4>
+                  <p class="card-text fw-bold">Current: 350MW</p>
+                  <p class="card-text fw-bold">Previous: 100MW</p>
                   <!-- <hr class="bg-dark pt-1"> -->
                   <!-- <p class="card-text fw-bold">Supply: XXXX</p> -->
                 </div>
@@ -235,7 +296,9 @@
               <div class="card col m-2" style="">
                 <div class="card-body">
                   <!-- <h6 class="card-title">Price:</h6> -->
-                  <p class="card-text fw-bold">Last Month Electricity Usage: 15000MW</p>
+                  <h4 class="card-text fw-bold">Last Month Electricity Usage</h4>
+                  <p class="card-text fw-bold">Current: 15000MW</p>
+                  <p class="card-text fw-bold">Previous: 14500MW</p>
                   <!-- <hr class="bg-dark pt-1"> -->
                   <!-- <p class="card-text fw-bold">Gas: XXXX/unit</p> -->
                 </div>
@@ -244,16 +307,9 @@
               <div class="card col m-2" style="">
                 <div class="card-body">
                   <!-- <h6 class="card-title">Price:</h6> -->
-                  <p class="card-text fw-bold">Renewable Energy Generation: 20Mw</p>
-                  <!-- <hr class="bg-dark pt-1"> -->
-                  <!-- <p class="card-text fw-bold">Expected Current: XXXX</p> -->
-                </div>
-              </div> 
-              
-              <div class="card col m-2" style="">
-                <div class="card-body">
-                  <!-- <h6 class="card-title">Price:</h6> -->
-                  <p class="card-text fw-bold">Last Month Gas Consumption: 3000mmcfd</p>
+                  <h4 class="card-text fw-bold">Last Month Gas Consumption</h4>
+                  <p class="card-text fw-bold">Current: 3000mmcfd</p>
+                  <p class="card-text fw-bold">Previous: 2400mmcfd</p>
                   <!-- <hr class="bg-dark pt-1"> -->
                   <!-- <p class="card-text fw-bold">Expected Current: XXXX</p> -->
                 </div>
@@ -276,14 +332,14 @@
 
 
     <script>
-      const xValues = ["1st weekly","2nd weekly","3rd weekly","4th weekly","5th weekly","6th weekly","7th weekly","8th weekly","9th weekly","10th weekly"];
+      const xValues = ["0","1st","2nd","3rd","4th","5th","6th","7th","8th","9th"];
 
       new Chart("myChart", {
         type: "line",
         data: {
           labels: xValues,
           datasets: [ { 
-            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            data: [20,22,25,30,27,24,21,20,22,18],
             borderColor: "green",
             fill: false
           }]
@@ -297,7 +353,7 @@
         data: {
           labels: xValues,
           datasets: [{ 
-            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            data: [35,42,46,50,45,41,34,32,28,25],
             borderColor: "green",
             fill: false
           }]
@@ -311,15 +367,11 @@
         data: {
           labels: xValues,
           datasets: [{ 
-            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            data: [1600,1609,1615,1610,1660,1670,1680,1700,1740,1780],
             borderColor: "red",
             fill: false
           }, { 
-            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-            borderColor: "green",
-            fill: false
-          }, { 
-            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            data: [1800,1820,1815,1830,1850,1870,1860,1900,1910,1920],
             borderColor: "blue",
             fill: false
           }]
@@ -333,15 +385,11 @@
         data: {
           labels: xValues,
           datasets: [{ 
-            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            data: [2280,2300,2350,2370,2375,2410,2450,2500,2560,2600],
             borderColor: "red",
             fill: false
           }, { 
-            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-            borderColor: "green",
-            fill: false
-          }, { 
-            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            data: [3000,3050,3020,3060,3100,3080,3110,3120,3150,3170],
             borderColor: "blue",
             fill: false
           }]
@@ -350,20 +398,17 @@
           legend: {display: false}
         }
       });
+      const xValues_2 = ["0","2023","2025","2027","2029","2031","2033","2035","2037","2039"];
       new Chart("myChart_5", {
         type: "line",
         data: {
-          labels: xValues,
+          labels: xValues_2,
           datasets: [{ 
-            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-            borderColor: "red",
-            fill: false
-          }, { 
-            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            data: [60000,60000,60000,60000,60000,60000,60000,60000,60000,60000],
             borderColor: "green",
             fill: false
           }, { 
-            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            data: [28000,30000,31500,32200,34500,36000,37500,40000,41000,42500],
             borderColor: "blue",
             fill: false
           }]
